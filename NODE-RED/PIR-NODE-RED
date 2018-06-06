@@ -1,0 +1,84 @@
+[
+    {
+        "id": "d04b4b4b.109d78",
+        "type": "tab",
+        "label": "Flow 5",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "b32133e1.0a25f",
+        "type": "rpi-gpio in",
+        "z": "d04b4b4b.109d78",
+        "name": "PIR",
+        "pin": "11",
+        "intype": "tri",
+        "debounce": "25",
+        "read": false,
+        "x": 276.6666564941406,
+        "y": 216.66665172576904,
+        "wires": [
+            [
+                "cd96001a.ba702"
+            ]
+        ]
+    },
+    {
+        "id": "16356d69.002c03",
+        "type": "firebase modify",
+        "z": "d04b4b4b.109d78",
+        "name": "FIREBASE",
+        "firebaseconfig": "",
+        "childpath": "data2",
+        "method": "push",
+        "value": "msg.payload",
+        "priority": "msg.priority",
+        "x": 1046.666633605957,
+        "y": 400.99997329711914,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d0e8b962.020168",
+        "type": "debug",
+        "z": "d04b4b4b.109d78",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 1049.666648864746,
+        "y": 193.33332633972168,
+        "wires": []
+    },
+    {
+        "id": "cd96001a.ba702",
+        "type": "function",
+        "z": "d04b4b4b.109d78",
+        "name": "",
+        "func": "m=msg.payload\nif (m==1)\n    {\n        return {payload:\"Person is detected\"}\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 632.6666088104248,
+        "y": 265.9999990463257,
+        "wires": [
+            [
+                "d0e8b962.020168",
+                "16356d69.002c03",
+                "aaacc357.af599"
+            ]
+        ]
+    },
+    {
+        "id": "aaacc357.af599",
+        "type": "play audio",
+        "z": "d04b4b4b.109d78",
+        "name": "",
+        "voice": "4",
+        "x": 1034.9999999999998,
+        "y": 284.99999999999994,
+        "wires": []
+    }
+]
