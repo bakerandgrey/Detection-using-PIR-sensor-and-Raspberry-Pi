@@ -15,11 +15,11 @@
         "intype": "tri",
         "debounce": "25",
         "read": false,
-        "x": 276.6666564941406,
-        "y": 216.66665172576904,
+        "x": 229.99999237060547,
+        "y": 233.33331680297852,
         "wires": [
             [
-                "cd96001a.ba702"
+                "724afbbf.e21244"
             ]
         ]
     },
@@ -33,8 +33,8 @@
         "method": "push",
         "value": "msg.payload",
         "priority": "msg.priority",
-        "x": 1046.666633605957,
-        "y": 400.99997329711914,
+        "x": 999.9999694824219,
+        "y": 417.6666383743286,
         "wires": [
             []
         ]
@@ -49,8 +49,8 @@
         "console": false,
         "tostatus": false,
         "complete": "payload",
-        "x": 1049.666648864746,
-        "y": 193.33332633972168,
+        "x": 1002.9999847412109,
+        "y": 209.99999141693115,
         "wires": []
     },
     {
@@ -61,8 +61,8 @@
         "func": "m=msg.payload\nif (m==1)\n    {\n        return {payload:\"Person is detected\"}\n}\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 632.6666088104248,
-        "y": 265.9999990463257,
+        "x": 585.9999446868896,
+        "y": 282.66666412353516,
         "wires": [
             [
                 "d0e8b962.020168",
@@ -77,8 +77,31 @@
         "z": "d04b4b4b.109d78",
         "name": "",
         "voice": "4",
-        "x": 1034.9999999999998,
-        "y": 284.99999999999994,
+        "x": 988.3333358764646,
+        "y": 301.6666650772094,
         "wires": []
+    },
+    {
+        "id": "724afbbf.e21244",
+        "type": "delay",
+        "z": "d04b4b4b.109d78",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 414.9999694824219,
+        "y": 213.3333282470703,
+        "wires": [
+            [
+                "cd96001a.ba702"
+            ]
+        ]
     }
 ]
