@@ -6,6 +6,6 @@ We have taken two approaches here.
 2. Using node red.  
 
 ### This project was carried out by (github username / FULL NAME):  
-1. **abelkurian / ABEL KURIAN OOMMEN**.  
-2. **Minu-Thomas / MINU THOMAS**.  
-3. **mohammedaslamps / MOHAMMED ASLAM P S**.
+**1. abelkurian / ABEL KURIAN OOMMEN**.  
+**2. Minu-Thomas / MINU THOMAS**.  
+**3. mohammedaslamps / MOHAMMED ASLAM P S**.
